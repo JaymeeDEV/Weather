@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <div class="row mt-5">
-      <div class="col-4">
+    <div class="row mt-5 text-center">
+      <div class="col-4 d-flex justify-content-center">
 <div class="card" style="width: 75%;">
   <h4 class="card-title text-center pt-4">Today</h4>
   <img class="card-img-top" v-bind:src="'http://openweathermap.org/img/wn/' + weather.list[0].weather[0].icon + '@2x.png' " />
@@ -14,7 +14,7 @@
 </div>
 </div>
 </div>
-<div class="col-4">
+<div class="col-4 d-flex justify-content-center">
 <div class="card" style="width: 75%;">
   <h4 class="card-title text-center pt-4">Tomorrow</h4>
   <img class="card-img-top" v-bind:src="'http://openweathermap.org/img/wn/' + weather.list[8].weather[0].icon + '@2x.png' " />
@@ -27,10 +27,10 @@
 </div>
 </div>
 </div>
-<div class="col-4">
+<div class="col-4 d-flex justify-content-center">
 <div class="card" style="width: 75%;">
   <h4 class="card-title text-center pt-4">Day 3</h4>
-  <img class="card-img-top" v-bind:src="'http://openweathermap.org/img/wn/' + weather.list[8].weather[0].icon + '@2x.png' " />
+  <img class="card-img-top" v-bind:src="'http://openweathermap.org/img/wn/' + weather.list[16].weather[0].icon + '@2x.png' " />
   <div class="card-body">
     <ul class="list-group list-group-flush">
     <li class="list-group-item">{{ weather.list[16].dt_txt }}</li>
@@ -41,11 +41,11 @@
 </div>
 </div>
 </div>
-<div class="row">
-  <div class="col-6">
+<div class="row mt-5 text-center">
+  <div class="col-6 d-flex justify-content-center">
   <div class="card" style="width: 50%;">
     <h4 class="card-title text-center pt-4">Day 4</h4>
-    <img class="card-img-top" v-bind:src="'http://openweathermap.org/img/wn/' + weather.list[8].weather[0].icon + '@2x.png' " />
+    <img class="card-img-top" v-bind:src="'http://openweathermap.org/img/wn/' + weather.list[24].weather[0].icon + '@2x.png' " />
     <div class="card-body">
       <ul class="list-group list-group-flush">
       <li class="list-group-item">{{ weather.list[24].dt_txt }}</li>
@@ -55,10 +55,10 @@
   </div>
   </div>
   </div>
-  <div class="col-6">
+  <div class="col-6 d-flex justify-content-center">
   <div class="card" style="width: 50%;">
     <h4 class="card-title text-center pt-4">Day 5</h4>
-    <img class="card-img-top" v-bind:src="'http://openweathermap.org/img/wn/' + weather.list[8].weather[0].icon + '@2x.png' " />
+    <img class="card-img-top" v-bind:src="'http://openweathermap.org/img/wn/' + weather.list[32].weather[0].icon + '@2x.png' " />
     <div class="card-body">
       <ul class="list-group list-group-flush">
       <li class="list-group-item">{{ weather.list[32].dt_txt }}</li>
@@ -89,6 +89,9 @@ export default {
 };
 </script>
 <style>
+*{
+  font-family: 'Comfortaa', cursive;
+}
 li{
   text-transform: capitalize;
 }
