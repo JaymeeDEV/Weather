@@ -1,7 +1,12 @@
 <template>
   <div class="home">
-    <h1>Dashboard</h1>
-    <pre>{{ forecast }}</pre>
+    <h3>Daily</h3>
+    <br/>
+    <p>{{ weather.list[0].dt_txt }}</p>
+    <p>{{ weather.list[0].main.temp }}</p>
+    <p>{{ weather.list[0].weather[0].description }}</p>
+    <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
+    <p>{{ weather.list[0].weather[0].icon }}</p>
   </div>
 </template>
 <script>
@@ -11,13 +16,18 @@ export default {
   name: 'home',
   data() {
     return {
-      forecast: {},
+      weather: {},
     };
   },
   mounted() {
-    API.getForecast().then((result) => {
-      this.forecast = result;
+    API.getWeather().then((result) => {
+      this.weather = result;
     });
   },
 };
 </script>
+<style>
+p{
+  text-transform: capitalize;
+}
+</style>
