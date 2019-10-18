@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <div class="row mt-5 pt-5 text-center">
-      <DublinForecast day="1"/>
+    <div class="col-md-2 col-md-offset-1"><DublinForecast /></div>
+    <div class="col-md-2"><DublinForecast /></div>
+    <div class="col-md-2"><DublinForecast /></div>
+    <div class="col-md-2"><DublinForecast /></div>
+    <div class="col-md-2"><DublinForecast /></div>
+
     </div>
   </div>
 </template>

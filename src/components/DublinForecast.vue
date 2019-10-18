@@ -1,5 +1,5 @@
 <template>
-  <div class="card" style="width:50%">
+  <div class="card">
     <h4 class="card-title text-center pt-4">Day 6</h4>
     <img class="card-img-top" v-bind:src="'http://openweathermap.org/img/wn/' + weatherDublin.list[32].weather[0].icon + '@2x.png' " />
     <div class="card-body">
