@@ -2,31 +2,32 @@
   <div class="home">
     <h2 class="mt-5 pt-5">Dublin</h2>
     <div class="row mt-5 pt-5 text-center">
-      <div class="col-md-2 col-md-offset-1"><DublinForecast /></div>
-      <div class="col-md-2"><DublinForecast /></div>
-      <div class="col-md-2"><DublinForecast /></div>
-      <div class="col-md-2"><DublinForecast /></div>
-      <div class="col-md-2"><DublinForecast /></div>
+      <div class="col-md-2 col-md-offset-1"><DublinForecast :day='0'/></div>
+      <div class="col-md-2"><DublinForecast :day='8' /></div>
+      <div class="col-md-2"><DublinForecast :day='16' /></div>
+      <div class="col-md-2"><DublinForecast :day='24' /></div>
+      <div class="col-md-2"><DublinForecast :day='32' /></div>
     </div>
     <h2 class="mt-5 pt-3">Cork</h2>
     <div class="row mt-5 pt-5 text-center">
-      <div class="col-md-2 col-md-offset-1"><DublinForecast /></div>
-      <div class="col-md-2"><DublinForecast /></div>
-      <div class="col-md-2"><DublinForecast /></div>
-      <div class="col-md-2"><DublinForecast /></div>
-      <div class="col-md-2"><DublinForecast /></div>
+      <div class="col-md-2 col-md-offset-1"><CorkForecast :day='0'/></div>
+      <div class="col-md-2"><CorkForecast :day='8' /></div>
+      <div class="col-md-2"><CorkForecast :day='16' /></div>
+      <div class="col-md-2"><CorkForecast :day='24' /></div>
+      <div class="col-md-2"><CorkForecast :day='32' /></div>
     </div>
     <h2 class="mt-5 pt-3">Galway</h2>
     <div class="row my-5 pt-5 text-center">
-      <div class="col-md-2 col-md-offset-1"><DublinForecast /></div>
-      <div class="col-md-2"><DublinForecast /></div>
-      <div class="col-md-2"><DublinForecast /></div>
-      <div class="col-md-2"><GalwayForecast /></div>
-      <div class="col-md-2"><CorkForecast /></div>
+      <div class="col-md-2 col-md-offset-1"><GalwayForecast :day='0'/></div>
+      <div class="col-md-2"><GalwayForecast :day='8' /></div>
+      <div class="col-md-2"><GalwayForecast :day='16' /></div>
+      <div class="col-md-2"><GalwayForecast :day='24' /></div>
+      <div class="col-md-2"><GalwayForecast :day='32' /></div>
     </div>
   </div>
 </template>
 <script>
+import moment from 'moment';
 import DublinForecast from '../components/DublinForecast.vue';
 import CorkForecast from '../components/CorkForecast.vue';
 import GalwayForecast from '../components/GalwayForecast.vue';
@@ -38,6 +39,11 @@ export default {
     CorkForecast,
     GalwayForecast,
   },
+  data() {
+    return {
+      moment: { moment },
+    };
+  },
 };
 </script>
 <style>
@@ -46,6 +52,10 @@ export default {
 }
 li{
   text-transform: capitalize;
+}
+
+.card{
+  height:100%;
 }
 
 header {

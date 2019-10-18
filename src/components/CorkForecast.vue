@@ -1,7 +1,14 @@
 <template>
-<div>
-  <h1>{{ weatherCork.list[32].weather[0].description }}</h1>
-</div>
+  <div class="card">
+    <h4 class="card-title text-center pt-4">Day 6</h4>
+    <img class="card-img-top" :src="'http://openweathermap.org/img/wn/' + weatherCork.list[day].weather[0].icon + '@2x.png' " />
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ weatherCork.list[day].main.temp }}&#8451;</li>
+        <li class="list-group-item">{{ weatherCork.list[day].weather[0].description }}</li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -14,6 +21,9 @@ export default {
       weatherCork: {},
     };
   },
+  props: [
+    'day',
+  ],
   mounted() {
     API.getWeatherCork().then((result) => {
       this.weatherCork = result;
