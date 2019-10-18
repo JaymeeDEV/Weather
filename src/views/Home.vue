@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="row mt-5 text-center">
+    <div class="row mt-5 pt-5 text-center">
       <div class="col-4 d-flex justify-content-center">
 <div class="card" style="width: 75%;">
   <h4 class="card-title text-center pt-4">Today</h4>
@@ -41,7 +41,7 @@
 </div>
 </div>
 </div>
-<div class="row mt-5 text-center">
+<div class="row my-5 text-center">
   <div class="col-6 d-flex justify-content-center">
   <div class="card" style="width: 50%;">
     <h4 class="card-title text-center pt-4">Day 4</h4>
@@ -94,5 +94,14 @@ export default {
 }
 li{
   text-transform: capitalize;
+}
+
+header {
+  position:fixed;
+  left:0;
+  top:0;
+  width:100vw;
+  z-index:200;
+  height:100px;
 }
 </style>
