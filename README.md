@@ -1,6 +1,6 @@
 # Weather or Not
 
-This is a simple VueJS application which uses [Open Weather Map's] (https://openweathermap.org) API to grab the forecast from a choice of Dublin, Cork, and Galway for the current date and the following 4 days.
+This is a simple VueJS application which uses [Open Weather Map's](https://openweathermap.org) API to grab the forecast from a choice of Dublin, Cork, and Galway for the current date and the following 4 days.
 
 ## Project setup
 ```
