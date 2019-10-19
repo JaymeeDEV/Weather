@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <h4 class="card-title text-center pt-4">Day 1</h4>
+  <h4 class="card-title text-center pt-4">{{ new Date() | moment("add", [date]+" days", "L") }}</h4>
     <img class="card-img-top" :src="'http://openweathermap.org/img/wn/' + weatherGalway.list[day].weather[0].icon + '@2x.png' " />
     <div class="card-body">
       <ul class="list-group list-group-flush">
@@ -23,6 +23,7 @@ export default {
   },
   props: [
     'day',
+    'date',
   ],
   mounted() {
     API.getWeatherGalway().then((result) => {
